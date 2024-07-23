@@ -1,0 +1,33 @@
+---
+import BlockImput from "../BlockImput.astro";
+import EmailFormImput from "../EmailFormImput.astro";
+import FlexBox from "../FlexBox.astro";
+import InlineFormImput from "../InlineFormImput.astro";
+---
+
+<form action="" class="grid gp-200">
+    <FlexBox>
+        <InlineFormImput text="First Name" aria="Enter your first name" />
+        <InlineFormImput text="Last Name" aria="Enter your last name" />
+    </FlexBox>
+    <EmailFormImput text="Email Address" aria="Enter your email address" />
+    <InlineFormImput text="Subject" aria="Enter the subject of the message"/>
+    <BlockImput text="Message" aria="Write Your message" />
+    <button type="submit" class="submit-btn">Send Message</button>
+
+</form>
+
+<style>
+     .submit-btn {
+        cursor: pointer;
+        background-color: var(--clr-primary);
+        padding: var(--sp-100) var(--sp-150);
+        color: var(--clr-white);
+        font-family: var(--font-fam-headings);
+        font-weight: 700;
+        border-radius: var(--sp-50);
+    }
+    .submit-btn:hover,.submit-btn:focus {
+        opacity: 80%
+    }
+</style>

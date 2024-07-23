@@ -1,0 +1,29 @@
+---
+import ContactForm from "../components/blocks/ContactForm.astro";
+import Container from "../components/Container.astro";
+import NarrowContainer from "../components/NarrowContainer.astro";
+import MainTemplate from "../templates/MainTemplate.astro";
+---
+
+<MainTemplate title="Contact Us" description="Reach out to us if you want to work with us ">
+     <!-- Banner -->
+     <section class="p-section bg-seccondary">
+        <Container>
+            <div class="grid gp-150 txt-center">
+                <h1 class="h1">Contact Us</h1>
+                <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum molestias illo totam iste asperiores! Consequuntur quas placeat suscipit corrupti laborum. Obcaecati aliquid hic doloremque necessitatibus, est animi officia ducimus recusandae.</p>
+            </div>
+        </Container>
+     </section>
+
+     <!-- Contact Form -->
+      <section class="p-section">
+        <NarrowContainer>
+            <div class="grid gp-150 mb-200 txt-center">
+                <h2 class="h2 clr-tertiary">Send Us a Note</h2>
+                <p class="p clr-tertiary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum molestias illo totam iste asperiores! Consequuntur quas placeat suscipit corrupti laborum. Obcaecati aliquid hic doloremque necessitatibus, est animi officia ducimus recusandae.</p>
+            </div>
+            <ContactForm />
+        </NarrowContainer>
+      </section>
+</MainTemplate>

@@ -1,32 +1,59 @@
 ---
-import BtnSeccondary from "../components/BtnSeccondary.astro";
-import CardPrimary from "../components/CardPrimary.astro";
+import BtnPrimary from "../components/BtnPrimary.astro";
 import Container from "../components/Container.astro";
-import Grid3 from "../components/Grid3.astro";
+import FlexBox from "../components/FlexBox.astro";
 import MainTemplate from "../templates/MainTemplate.astro";
+
+// images
+import { Image } from "astro:assets";
+import heroImg from "../media/index/1.jpg";
+import aboutImg from "../media/index/2.jpg"
+import EmailOptinForm from "../components/blocks/EmailOptinForm.astro";
+import ServicesSection from "../components/blocks/ServicesSection.astro";
 ---
 
-<MainTemplate title="Home">
-    <section class="p-section bg-primary">
+<MainTemplate title="My Homepage" description="This is the home page of my site">
+    <!-- Hero section -->
+     <section class="p-section">
         <Container>
-            <h1 class="h1 mb-150 txt-center">Welcome to the Core Theme Beta</h1>
-            <p class="p txt-center mb-150">The Core Theme contains all the styling settings that I use on my own website. Each time I add a new style, component, or layout, the core theme will get updated</p>
-            <div class="flex justify-center m-auto mb-250">
-                <BtnSeccondary text="View Components" link="/components" />
-            </div>
+            <FlexBox>
+                <div class="grid gp-150 justify-left ">
+                    <h1 class="h1">World Class Design Agency</h1>
+                    <p class="p clr-navy">raesent dapibus neque id cursus faucibus tortor neque egestas auguae eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan porttitor facilisis luctus metus.</p>
+                    <div class="flex justify-left">
+                        <BtnPrimary text="Contact Us" link="/contact" />
+                    </div>
+                </div>
+                    <Image src={heroImg} alt="Hero Image" title="Hero Image" width={400} /> 
+            </FlexBox>
         </Container>
-    </section>
-    <section class="p-section bg-light-orange">
+     </section>
+
+     <!-- Services -->
+      <ServicesSection />
+
+    <!-- About -->
+     <section class="p-section">
         <Container>
-            <div class="text flex flex-col gp-150 justify-center m-auto mb-200 txt-center">
-                <h2 class="h2 clr-primary">How to get started</h2>
-                <p class="p clr-primary">Get started using the theme in just 3 steps</p>
+            <div class="grid gp-150 mb-150 txt-center">
+                <h2 class="h2">About Us</h2>
+                <p class="p">Lorem ipsum dolor sit amet.</p>
             </div>
-            <Grid3>
-                <CardPrimary title="Build Your Pages" body="The core theme makes it easy to build out pages with utilities, components and blocks."/>
-                <CardPrimary title="Customize" body="It is so easy to customize the core theme. Built on top of CSS varieties, you can easily apply your own design with ease." />
-                <CardPrimary title="Deploy" body="Once your site is built, you are able to deploy it with ease."
-            <Grid3 />
+            <FlexBox>
+                <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis deleniti harum ex odio nemo cupiditate dolor sint, recusandae dolorem molestias magnam maiores suscipit eum eaque voluptas cum esse maxime pariatur?</p>
+                <Image src={aboutImg} alt="About Image" title="About Image" width={400} />
+            </FlexBox>
         </Container>
-    </section>
+     </section>
+     
+     <!-- Email Subscription -->
+      <section class="p-section bg-seccondary">
+        <Container>
+            <div class="grid mb-150 txt-center">
+                <h2 class="h2">Subscribe to Our Mailing List</h2>
+                <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ut eius fugiat error porro minima quia? Nulla, veniam! Ab hic laborum voluptates assumenda fugit sed molestiae ipsum eaque autem voluptatibus.</p>
+            </div> 
+            <EmailOptinForm />
+        </Container>
+      </section>
 </MainTemplate>

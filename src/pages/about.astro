@@ -1,0 +1,38 @@
+---
+import ServicesSection from "../components/blocks/ServicesSection.astro";
+import Container from "../components/Container.astro";
+import FlexBox from "../components/FlexBox.astro";
+import MainTemplate from "../templates/MainTemplate.astro";
+
+// Asset Imports
+import { Image } from "astro:assets";
+import valueImg from "../media/index/3.jpg"
+---
+
+<MainTemplate title="About Us" description="Find out more about our agency ">
+    <!-- Banner -->
+     <section class="p-section bg-seccondary">
+        <Container>
+            <div class="grid gp-150 txt-center">
+                <h1 class="h1">About Our Agency</h1>
+                <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum molestias illo totam iste asperiores! Consequuntur quas placeat suscipit corrupti laborum. Obcaecati aliquid hic doloremque necessitatibus, est animi officia ducimus recusandae.</p>
+            </div>
+        </Container>
+     </section>
+
+     <!-- Services -->
+      <ServicesSection />
+
+      <!-- Our Values -->
+       <section class="p-section">
+        <Container>
+            <div class="grid gp-200 mb-150 txt-center">
+                <h2 class="h2">Our Values</h2>
+            </div>
+            <FlexBox>
+                <p class="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente tenetur qui exercitationem numquam omnis ab vitae ipsam minima. Provident adipisci velit recusandae in facere minus ex sequi, fugiat quisquam voluptas.</p>
+                <Image src={valueImg} alt="Our Values" title="Our Values" width={500}/>
+            </FlexBox>
+        </Container>
+       </section>
+</MainTemplate>
